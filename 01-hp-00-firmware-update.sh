@@ -59,6 +59,8 @@ printf "\e[2G - Installing packages..." 2>&1
 DEBIAN_FRONTEND=noninteractive apt install ilorest -yq 2>&1
 command -v ilorest > /dev/null 2>&1 || { printf "hp ilorest tool failed to install\n" 2>&1;exit 1; }
 
-# Set boot mode to legacy
-ilorest setBootMode=LegacyBios --selector=Bios. --commit
+# Download fwpkg file
+#wget -O /tmp/file_name.fwpkg http://url/file_name.fwpkg
+#ilorest flashfwpkg /tmp/file_name.fwpkg
+
 
