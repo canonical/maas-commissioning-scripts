@@ -1,11 +1,11 @@
 #!/bin/bash
 # --- Start MAAS 1.0 script metadata ---
 # name: 01-connectx4_smc_S100G-01-fwupdate
-# title: Configure 
-# description: Update firmware, enable features Super Micro Computer Inc MT27700 Family [ConnectX-4] (SMC OEM of Mellanox ConnectX-4)
+# title: Super Micro Computer Inc MT27700 [ConnectX-4]   
+# description: Update firmware, enable features on Super Micro Computer Inc MT27700 Family [ConnectX-4] (SMC OEM of Mellanox ConnectX-4)
 # type: commissioning
 # script_type: commissioning
-# tags: commissioning, AOC-S100G-m2C,MT27700
+# tags: commissioning, AOC-S100G-m2C, MT27700
 # recommission: False
 # destructive: False
 # hardware_type: node
@@ -41,7 +41,7 @@
 [[ $EUID -eq 0 ]] || { printf "\nThis script requires admin privileges.\n\n";exit 1; }
 
 
-### Update the four URLs below to keep script current
+### Update the three URLs below to keep script current
 
 # Firmware URL
 export MLX_FW_URL='https://www.supermicro.com/wftp/Firmware/Mellanox/AOC-S100G-m2C/S100G1C.zip'
