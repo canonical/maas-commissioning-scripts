@@ -31,7 +31,7 @@
 # information is supplied to the client, and if applicable, 3) Validate any MAAS
 # dhcpsnippets (such as increasing the lifetime for lease during PXE booting.
 
-for NIC in $(/usr/bin/findfind /sys/class/net -type l ! -lname "*virtual*" -printf '%P\n'|sort -uV);do
+for NIC in $(/usr/bin/find /sys/class/net -type l ! -lname "*virtual*" -printf '%P\n'|sort -uV);do
 	echo ${NIC};${NIC//[a-z0-9]/=};echo;/usr/sbin/netplan ip leases ${NIC};echo;
 done
 exit 0
