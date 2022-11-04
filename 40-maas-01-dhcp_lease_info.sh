@@ -27,7 +27,7 @@
 # --- End MAAS 1.0 script metadata ---
 
 # Runs `/usr/sbin/netplan ip leases $iface` on all the physical interfaces
-# This is done validate that 1) MAAS if providing DHCP, 2) Ensure the correct DNS
+# This is done to validate that 1) MAAS if providing DHCP, 2) Ensure the correct DNS
 # information is supplied to the client, and if applicable, 3) Validate any MAAS
 # dhcpsnippets (such as increasing the lifetime for lease during PXE booting.
 
